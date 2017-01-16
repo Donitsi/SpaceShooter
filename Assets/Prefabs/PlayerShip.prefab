@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 95828522114761950}
   - component: {fileID: 114352520000048704}
   - component: {fileID: 114199161437765130}
+  - component: {fileID: 114980919426626042}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -88,6 +89,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+--- !u!114 &114980919426626042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271753114637978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c794fcc966007c47b1fb3f270fe503d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 0}
+  healthValue: {fileID: 0}
 --- !u!212 &212430678252325902
 SpriteRenderer:
   m_ObjectHideFlags: 1

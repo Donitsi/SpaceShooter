@@ -7,28 +7,19 @@ public class PlayerHealth : MonoBehaviour {
 
 
     public GameObject explosionPrefab;
-    private int playerHealth = 3;
-    private int enemyHit = 1;
+    private int playerHealth = 100;
+    private int enemyHit = 10;
     public Text healthValue;
     private IEnumerator coroutine;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Slider healthSlider;
+    //public int currentHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
             EnemyHit();
-            coroutine = Wating(2.0f);
-            StartCoroutine(coroutine);
+            StartCoroutine(Wating());
         }
 
         if (playerHealth <= 0)
@@ -37,14 +28,19 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
 
-    IEnumerator Wating(float waitTime)
+    public IEnumerator Wating(/*float waitTime*/)
     {
-        yield return new WaitForSeconds(waitTime);
+        Debug.Log("So far...");
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("..so good");
     }
+
 
     public void EnemyHit()
     {
         playerHealth -= enemyHit;
+        //currentHealth -= enemyHit;
+        healthSlider.value -= enemyHit;
         healthValue.text = playerHealth.ToString();
     }
 
@@ -52,5 +48,10 @@ public class PlayerHealth : MonoBehaviour {
     {
         Destroy(gameObject/*, destroyDelayTime*/);
         GameObject.Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+    }
+
+    public void NoDamage()
+    {
+
     }
 }
