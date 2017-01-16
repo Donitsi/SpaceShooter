@@ -7,7 +7,10 @@ public class BasicDamageTaker : MonoBehaviour, IDamageAble {
 
     public int hitPoins = 1;
     public GameObject explosionPrefab;
-    public float destroyDelayTime = 0.5f;
+    private float destroyDelayTime = 0.5f;
+    //public float triggerDelayTime = 1;
+    public int scoreValue = 100;
+    public int playerHealth = 3; 
 
     public void Damage(int value)
     {
@@ -20,7 +23,11 @@ public class BasicDamageTaker : MonoBehaviour, IDamageAble {
 
     public void Kill()
     {
+        Destroy(gameObject/*, destroyDelayTime*/);
         GameObject.Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject, destroyDelayTime);
+        
+
+        // Pääsy tähän peliobjektiin
+        GameObject.Find("GameManager").GetComponent<GameManager>().AddScore(scoreValue);
     }
 }
