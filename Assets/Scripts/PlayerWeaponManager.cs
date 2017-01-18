@@ -7,10 +7,9 @@ public class PlayerWeaponManager : MonoBehaviour {
     private List<IWeapon> activeWeapons = new List<IWeapon>();
 
     public GameObject simpleWeaponProjectile;
-
     public GameObject simpleWeaponProjectile2;
-
-    public GameObject simpleWeaponProjectile3;
+    public AudioSource fireEffect;
+    public AudioSource powerUpEffect;
 
 
     // Use this for initialization
@@ -24,6 +23,8 @@ public class PlayerWeaponManager : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Fire1"))
         {
+            fireEffect.Play();
+
             foreach (IWeapon w in activeWeapons)
             {
                 w.Fire(transform.position);
@@ -34,6 +35,7 @@ public class PlayerWeaponManager : MonoBehaviour {
     public void AddWeapon(PlayerWeaponEnums weaponType)
     {
         Debug.Log("Add new weapon");
+        powerUpEffect.Play();
         switch (weaponType)
         {
             case PlayerWeaponEnums.BasicBlaster:

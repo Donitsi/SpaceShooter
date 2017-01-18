@@ -1,0 +1,19 @@
+Asenna:
+
+
+node.js
+git
+Heroku cli
+postman
+
+commands:
+
+git status 
+git add .
+git commit -m "dsdfasdf"
+git push heroku master
+
+{
+	"name":"Jaska",
+	"score":1000
+}

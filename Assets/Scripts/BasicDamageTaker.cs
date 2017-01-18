@@ -10,7 +10,8 @@ public class BasicDamageTaker : MonoBehaviour, IDamageAble {
     private float destroyDelayTime = 0.5f;
     //public float triggerDelayTime = 1;
     public int scoreValue = 100;
-    public int playerHealth = 3; 
+    public int playerHealth = 3;
+    public AudioSource smallExplosion;
 
     public void Damage(int value)
     {
@@ -25,8 +26,8 @@ public class BasicDamageTaker : MonoBehaviour, IDamageAble {
     {
         Destroy(gameObject/*, destroyDelayTime*/);
         GameObject.Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        
 
+        //smallExplosion.Play();
         // Pääsy tähän peliobjektiin
         GameObject.Find("GameManager").GetComponent<GameManager>().AddScore(scoreValue);
     }

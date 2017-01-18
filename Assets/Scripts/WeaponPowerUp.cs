@@ -6,6 +6,7 @@ public class WeaponPowerUp : MonoBehaviour {
 
     public PlayerWeaponEnums weaponType;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
