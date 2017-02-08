@@ -92,9 +92,9 @@ MonoBehaviour:
   hitPoins: 1
   explosionPrefab: {fileID: 1959285328186774, guid: 34f4cb7af51a5b24794bcf011ab8163c,
     type: 2}
-  destroyDelayTime: 0.5
   scoreValue: 100
   playerHealth: 3
+  smallExplosion: {fileID: 0}
 --- !u!114 &114836167332945426
 MonoBehaviour:
   m_ObjectHideFlags: 1

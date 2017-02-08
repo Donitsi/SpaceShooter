@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/mainMenu.unity
   - enabled: 1
     path: Assets/level1.unity
+  - enabled: 1
+    path: Assets/gameOver.unity
+  - enabled: 1
+    path: Assets/highScores.unity

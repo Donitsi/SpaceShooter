@@ -454,10 +454,10 @@ PlayerSettings:
   vrEditorSettings: {}
   cloudServicesEnabled:
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Hub: 0
-    UNet: 1
+    UNet: 0
   cloudProjectId: 80c01a70-d184-472d-af73-f9f1570256b7
   projectName: PeliOhj
   organizationId: donitchi

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
+    public GameObject enemyGameObject;
 
     public float moveSpeed = 1;
     public float sinAmplitude = 0.1f;
@@ -15,5 +16,6 @@ public class EnemyMovement : MonoBehaviour {
         transform.Translate(Mathf.Sin(transform.position.y) * sinAmplitude,
                             -moveSpeed * Time.deltaTime,
                             0);
-	}
+
+    }
 }

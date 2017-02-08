@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
     private int score = 0;
     public Text scoreValueObject;
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour {
     public void AddScore(int scoreIncrease)
     {
         score += scoreIncrease;
+        ScoreManager.score += scoreIncrease;
         scoreValueObject.text = score.ToString();
     }
 }
